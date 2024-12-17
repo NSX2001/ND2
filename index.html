@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elektrinės Valdymo Sąsaja</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+    <header>
+        <h1>Elektrinės Valdymo Sąsaja</h1>
+    </header>
+    <div class="container">
+        <div class="section">
+            <h2>Statusas</h2>
+            <div class="status">
+                <span>Elektros gamyba: <strong id="production">0 kW</strong></span>
+                <span>Akumuliatoriaus lygis: <strong id="battery">50%</strong></span>
+            </div>
+        </div>
+
+        <div class="section controls">
+            <h2>Valdymo mygtukai</h2>
+            <button onclick="startProduction()">Pradėti gamybą</button>
+            <button onclick="stopProduction()">Sustabdyti gamybą</button>
+            <button onclick="simulateClouds()">Simuliuoti debesis</button>
+            <button onclick="toggleMode()">Perjungti režimą</button>
+        </div>
+
+        <div class="section advanced">
+            <h2>Išplėstinės funkcijos</h2>
+            <button onclick="optimizeBattery()">Optimizuoti akumuliatorių</button>
+            <button onclick="manualInput()">Rankinis duomenų įvedimas</button>
+        </div>
+
+        <div class="section chart">
+            <h2>Grafikas</h2>
+            <canvas id="productionChart" width="800" height="400"></canvas>
+        </div>
+
+        <div id="output"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="functions.js" ></script>
+</body>
+</html>
